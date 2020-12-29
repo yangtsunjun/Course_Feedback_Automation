@@ -13,8 +13,10 @@ driver = webdriver.Chrome()
 driver.get('https://moltke.nccu.edu.tw/SSO/startApplication?name=inccustucmt')
 
 id_box = driver.find_element_by_name('captcha$Login1$UserName')
+# enter your account 
 id_box.send_keys('')
 pass_box = driver.find_element_by_name('captcha$Login1$Password')
+# enter your password
 pass_box.send_keys('')
 
 login_button = driver.find_element_by_id('captcha_Login1_LoginButton')
@@ -70,22 +72,6 @@ for i in range(6,6):
             driver.switch_to.parent_frame()
             WebDriverWait(driver, 10).until(lambda d: d.find_element_by_css_selector('#backurl')).click()
 
-#WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "btnclose"))).click()
-
-
 time.sleep(10)
-#element = driver.find_element_by_xpath("")
-#driver.execute_script("arguments[0].click();", element)
-
-#actions = ActionChains(driver)
-#actions.click(elem).perform()
-
-#bb = driver.find_element_by_id("btnclose")
-#bb.click()
-
-
-#driver.find_element_by_css_selector("a[href*='#'").click()
-
-#driver.find_element_by_partial_link_text('教師').click()
 
 
